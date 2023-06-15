@@ -24,4 +24,8 @@ public class Product
 
     // 0 - 100
     public byte Discount {get; set;}
+
+    public int? CategoryId {get; set;}
+    [ForeignKey("CategoryId")]
+    public Category? Category {get; set;}
 }
