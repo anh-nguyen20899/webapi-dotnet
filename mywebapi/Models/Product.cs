@@ -28,4 +28,11 @@ public class Product
     public int? CategoryId {get; set;}
     [ForeignKey("CategoryId")]
     public Category? Category {get; set;}
+    //relationship
+    public ICollection<OrderDetails> _orderDetails {get; set;} 
+
+    public Product()
+    {
+        _orderDetails = new List<OrderDetails>();
+    }
 }
